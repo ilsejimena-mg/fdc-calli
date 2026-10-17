@@ -4,8 +4,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const SLIDES = [
-  { src: '/images/calli-marcha-orgullo.jpg', alt: 'XXII Marcha del Orgullo LGBTIQAPNB+ del Estado de México' },
-  { src: '/images/calli-curso-lsm.jpg', alt: 'Curso de Lengua de Señas Mexicana (LSM) — Fuera del Clóset A. C.' },
+  { src: '/images/evento-jornada-derechos-salud-sexual.jpg', alt: 'Jornada por los derechos humanos y la salud sexual — Fuera del Clóset A. C.' },
+  { src: '/images/evento-presentacion-libro-un-vago-temblor-de-estrella.jpg', alt: 'Presentación del libro "Un vago temblor de estrella" con Terry Holiday' },
 ]
 
 const AUTOPLAY_MS = 6000

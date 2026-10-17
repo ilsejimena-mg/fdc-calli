@@ -17,7 +17,7 @@ export default function MaterialesPage() {
   return (
     <main className="container">
       <div className="about-page">
-        <h1>Materiales</h1>
+        <h1 style={{ color: 'var(--color-accent)' }}>Materiales</h1>
 
         <div className="posts-grid" style={{ marginTop: '2rem' }}>
           {REPORTS.map(({ title, date, url, image }) => (

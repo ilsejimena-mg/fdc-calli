@@ -10,7 +10,7 @@ export default function GalleryPage() {
     <main className="container">
       <div style={{ padding: '3rem 0' }}>
         <div className="section-header">
-          <h1 className="section-title">Galería</h1>
+          <h1 className="section-title" style={{ fontSize: '2.75rem', color: 'var(--color-accent)' }}>Galería</h1>
         </div>
 
         {albums.length === 0 ? (
