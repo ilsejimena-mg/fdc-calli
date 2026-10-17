@@ -1,0 +1,22 @@
+---
+title: "Jornadas de salud y prevención"
+date: "2023-06-01"
+description: "Jornadas comunitarias de información, consejería y prevención de VIH e ITS, incluyendo el proyecto de Ampliación de PrEP en Toluca."
+images:
+  - src: "/images/uploads/g2-foto31-pruebas-vih-metepec.jpg"
+    alt: "Jornada de aplicación de pruebas de VIH por el Día Mundial del Sida en Metepec, 2019"
+  - src: "/images/uploads/g2-jornada1-prep-pep-plaza.jpg"
+    alt: "Mesa informativa de PrEP y PEP en una plaza pública"
+  - src: "/images/uploads/g2-jornada3-prep-pep-charla.jpg"
+    alt: "Charla sobre salud y dignidad, prevención compartida del VIH"
+  - src: "/images/uploads/g2-jornada4-prep-pep-uam.jpg"
+    alt: "Mesa informativa de prevención de VIH e ITS en la UAM"
+  - src: "/images/uploads/g2-jornada5-prep-pep-antro.jpg"
+    alt: "Jornada de información sobre PrEP y PEP en un espacio nocturno, con el equipo de Calli"
+  - src: "/images/uploads/g2-jornada6-prep-valle-de-bravo.jpg"
+    alt: "Jornada de Prevención de ITS en Valle de Bravo, con AHF México y el DIF municipal"
+  - src: "/images/uploads/g2-jornada7-mesa-ocoyoacac.jpg"
+    alt: "Mesa informativa de salud sexual en la Casa de Cultura de Ocoyoacac"
+  - src: "/images/uploads/g2-jornada10-prep-pep-cancha.jpg"
+    alt: "Mesa informativa de PrEP y PEP en una cancha deportiva"
+---

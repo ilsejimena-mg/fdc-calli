@@ -18,7 +18,7 @@ const TEAM = [
     bio: 'Soy Licenciado en Sociología, líder del proyecto de "Ampliación de PrEP en Toluca" en cooperación con la Embajada de Francia en México; Gestión de consejería y tamizaje en VIH, Sífilis y VHC; Vinculación de casos a PrEP, PEP y TAR; Planificación de jornadas comunitarias en espacios públicos y espacios clave; Capacitaciones de bioética a personal de salud del estado de México; y colaboración con instituciones públicas de salud para fortalecer las actividades y servicios de atención.',
   },
   {
-    name: 'César M.G. (él)', role: 'Coordinación de Atención a la Salud Mental', photo: '/images/equipo-cesar.jpg', focus: 'center 25%',
+    name: 'César M.G. (él)', role: 'Coordinación de Atención a la Salud Mental', photo: '/images/equipo-cesar.jpg', focus: 'center 15%',
     bio: 'Soy Licenciado en Psicología y Maestro en Educación, actualmente estudia la Licenciatura en Educación Primaria en la ByBENMAC del estado de Zacatecas. Con amplia experiencia en docencia, orientación educativa y acompañamiento psicológico. Activista por los derechos humanos de la comunidad LGBTTTIQANB+, con enfoque en perspectiva de género, diversidad e inclusión.',
   },
   {
@@ -57,8 +57,6 @@ const TEAM = [
     name: 'Damian Peach (él/ella/elle)', role: 'Voluntariado', photo: '/images/equipo-damian.jpg', focus: 'center 20%',
     bio: 'Soy creador de contenido y activista por los derechos LGBTTTIQANB+. Comparto información sobre diversidad y temas sociales, además de participar en la orientación comunitaria sobre VIH y prevención mediante PrEP, promoviendo la información, la inclusión y la lucha contra el estigma y la discriminación.',
   },
-  { name: 'Dani Navarro (él)', role: 'Voluntariado', photo: '/images/equipo-dani-navarro.jpg', focus: 'center 20%', featured: true },
-  { name: 'Dani Vega (ella/elle)', role: 'Voluntariado', photo: '/images/equipo-dani-vega.jpg', focus: 'center 20%', featured: true },
   {
     name: 'Darina Robles Robles (ella)', role: 'Voluntariado', photo: '/images/equipo-darina-robles.jpg', focus: 'center 25%',
     bio: 'Soy estudiante de la Licenciatura en Comunicación por la UAEMéx y Técnica en Contabilidad. Mi experiencia profesional abarca la locución, la escritura de guiones, la producción audiovisual y la investigación científica social, con un enfoque en netnografía, violencia digital y narrativas sociales. En medios, destaco como creadora y voz del segmento cultural "Dato con Relato" en Radio Miled Toluca. Además, mantengo un firme compromiso ético y social: realizo labor comunitaria en el Centro Comunitario Calli, participo en la promoción de la lectura, soy vegana y activista por los derechos de los seres sintientes.',
@@ -87,13 +85,10 @@ const TEAM = [
     name: 'Ónix Seven (elle/él)', role: 'Voluntariado', photo: '/images/equipo-onix.jpg', focus: 'center 20%',
     bio: 'Soy fotografe, artista visual con formación en Ciencias Políticas y Administración Pública por la UAEMéx, desde donde abordo una comprensión profunda de las dinámicas humanas, el contexto social y las realidades periféricas. Mi labor se centra en la narrativa visual y la visibilización de las disidencias.',
   },
-  { name: 'Rafa (él)', role: 'Voluntariado', photo: '/images/equipo-rafa.jpg', focus: 'center 25%', featured: true },
-  { name: 'Rhamses (él)', role: 'Voluntariado', photo: '/images/equipo-rhamses-barragan.jpg', focus: 'center 20%', featured: true },
   {
     name: 'Viktor Mikael Cuadros González (él)', role: 'Voluntariado', photo: '/images/equipo-vik-mikael.jpg', focus: 'center 25%',
     bio: 'Soy Licenciado en Psicología por la universidad Autónoma del Estado de México, curso un diplomado en análisis funcional de la conducta en el instituto IETPC, así como un diplomado enfocado al acompañamiento de víctimas de violencia sexual, dedicado a la atención de personas con ansiedad y acompañamiento a víctimas de violencia.',
   },
-  { name: 'Zuke (elle/ella)', role: 'Voluntariado', photo: '/images/equipo-zuke.jpg', focus: 'center 20%', featured: true },
 ]
 
 const FEATURED = TEAM.filter(member => member.bio || member.featured)
@@ -105,29 +100,59 @@ export default function EquipoPage() {
       <div className="about-page">
         <h1 style={{ color: 'var(--color-accent)' }}>Conoce al equipo</h1>
 
-        {FEATURED.map(({ name, role, photo, focus, bio }) => (
-          <div key={name} style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 3rem' }}>
-            {role && (
-              <p style={{ fontSize: '1.3rem', fontWeight: 900, color: 'var(--color-accent)', margin: '0 0 0.9rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+        {FEATURED.map(({ name, role, photo, focus, bio }, i) => {
+          const isFirstVolunteer = role === 'Voluntariado' && (i === 0 || FEATURED[i - 1].role !== 'Voluntariado')
+
+          return (
+          <div key={name}>
+            {isFirstVolunteer && (
+              <p style={{
+                fontSize: '2.25rem', fontWeight: 900, color: 'var(--color-accent)', textAlign: 'center',
+                margin: '0 0 2.5rem', textTransform: 'uppercase', letterSpacing: '0.06em',
+              }}>
+                Voluntariado
+              </p>
+            )}
+            {role && role !== 'Voluntariado' && (
+              <p style={{
+                fontSize: '1.3rem', fontWeight: 900, color: 'var(--color-accent)', textAlign: 'center',
+                maxWidth: 900, margin: '0 auto 1.25rem', textTransform: 'uppercase', letterSpacing: '0.06em',
+              }}>
                 {role}
               </p>
             )}
-            <img
-              src={photo}
-              alt={name}
+            <div
               style={{
-                width: 180, height: 180, borderRadius: '50%', objectFit: 'cover',
-                objectPosition: focus || 'center',
-                border: '1px solid var(--color-border)', marginBottom: '1rem',
-                marginLeft: 'auto', marginRight: 'auto', display: 'block',
+                display: 'flex', flexWrap: 'wrap', gap: '2rem',
+                maxWidth: 900, margin: '0 auto 3rem', alignItems: 'flex-start',
               }}
-            />
-            <p style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--color-text)', margin: 0 }}>{name}</p>
+            >
+            <div style={{ width: 220, flexShrink: 0, textAlign: 'center', marginLeft: 'auto', marginRight: bio ? 0 : 'auto' }}>
+              <img
+                src={photo}
+                alt={name}
+                style={{
+                  width: 180, height: 180, borderRadius: '50%', objectFit: 'cover',
+                  objectPosition: focus || 'center',
+                  border: '1px solid var(--color-border)', marginBottom: '1rem',
+                  marginLeft: 'auto', marginRight: 'auto', display: 'block',
+                }}
+              />
+              <p style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--color-text)', margin: 0 }}>{name}</p>
+            </div>
+
             {bio && (
-              <p style={{ textAlign: 'justify', color: 'var(--color-text-muted)', lineHeight: 1.75, marginTop: '0.75rem' }}>{bio}</p>
+              <p style={{
+                flex: '1 1 320px', textAlign: 'justify', color: 'var(--color-text-muted)',
+                lineHeight: 1.75, marginTop: '0.5rem',
+              }}>
+                {bio}
+              </p>
             )}
+            </div>
           </div>
-        ))}
+          )
+        })}
 
         <div
           style={{

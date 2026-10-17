@@ -1,6 +1,6 @@
 ---
 title: "Jornada de Vacunación en Calli"
-date: "2026-03-10"
+date: "2023-05-25"
 description: "Jornada de vacunación realizada en las instalaciones de Calli, Centro Comunitario LGBTTTIQ+."
 images:
   - src: "/images/uploads/galeria-vacunacion-1.jpg"

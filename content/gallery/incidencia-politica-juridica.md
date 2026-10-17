@@ -1,0 +1,20 @@
+---
+title: "Incidencia política y jurídica"
+date: "2026-04-10"
+description: "Acciones de incidencia política y jurídica impulsadas por Fuera del Clóset A. C. para el reconocimiento de derechos de la población LGBTTTIQANB+ en el Estado de México."
+images:
+  - src: "/images/uploads/g2-foto1-ley-ecosig.jpg"
+    alt: "Aprobación de ley que prohíbe ECOSIG en el Estado de México. Octubre, 2020"
+  - src: "/images/uploads/g2-foto4-informe-bandos.jpg"
+    alt: "Presentación de Informe sobre Análisis de Bandos Municipales del Edomex en materia LGBT 2022. Enero, 2023"
+  - src: "/images/uploads/g2-foto6-matrimonio-igualitario.jpg"
+    alt: "Aprobación del matrimonio igualitario en el Estado de México. Octubre, 2022"
+  - src: "/images/uploads/g2-foto7-matrimonio-igualitario.png"
+    alt: "Aprobación del matrimonio igualitario en el Estado de México, segundo momento. Octubre, 2022"
+  - src: "/images/uploads/g2-foto8-demanda-presupuesto.jpg"
+    alt: "Presentación de demanda contra el Congreso local por falta de presupuesto LGBT en el Edomex. Febrero, 2023"
+  - src: "/images/uploads/g2-foto9-boda-amparo.jpg"
+    alt: "Celebración de matrimonio gay en Toluca, tras ganar amparo ante Juzgado de Distrito. Marzo, 2021"
+  - src: "/images/uploads/g2-foto38-reforma-ley-salud.png"
+    alt: "Presentación de reforma a la Ley General de Salud sobre no discriminación LGBTTTI+ en el Congreso federal. Febrero, 2023"
+---

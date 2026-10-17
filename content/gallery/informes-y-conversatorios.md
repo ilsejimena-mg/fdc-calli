@@ -1,0 +1,20 @@
+---
+title: "Informes, publicaciones y conversatorios"
+date: "2023-07-15"
+description: "Presentaciones de informes, libros y conversatorios organizados o acompañados por Fuera del Clóset A. C."
+images:
+  - src: "/images/uploads/g2-foto10-informe-2021.jpg"
+    alt: "Presentación del Informe Anual de Casos 2021. Enero, 2022"
+  - src: "/images/uploads/g2-foto12-informe-2022.jpg"
+    alt: "Presentación del Informe Anual de Casos 2022. Julio, 2023"
+  - src: "/images/uploads/g2-foto23-libro-ciudad-de-odios.jpg"
+    alt: "Presentación del libro 'Ciudad de Odios' en FILEM. Octubre, 2019"
+  - src: "/images/uploads/g2-foto24-conferencia-genaro-lozano.jpg"
+    alt: "Conferencia con Genaro Lozano en FILEM. Septiembre, 2017"
+  - src: "/images/uploads/g2-foto25-conversatorio-maternidades.jpg"
+    alt: "Conversatorio sobre Maternidades Lésbicas en la UAEMéx. Noviembre, 2019"
+  - src: "/images/uploads/g2-foto26-conversatorio-maternidades.jpg"
+    alt: "Conversatorio sobre Maternidades Lésbicas en la UAEMéx, otro momento. Noviembre, 2019"
+  - src: "/images/uploads/g2-foto27-conversatorio-trans.jpg"
+    alt: "Conversatorio 'Vidas y experiencias trans' en Toluca. Agosto, 2016"
+---
