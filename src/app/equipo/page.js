@@ -14,14 +14,6 @@ const TEAM = [
     bio: 'Soy una persona No Binaria que estudió Administración en Negocios Internacionales y amplié mi formación a través de la licenciatura en Ciencias Políticas y Administración Pública. Me desempeño como auxiliar en programas de investigación académica. Cuento con nueve años de experiencia consolidada y labor social sobre los derechos LGBTTTIQANB+, además de brindar atención personal en el centro comunitario Calli.',
   },
   {
-    name: 'Iván Torres Barrera (él)', role: 'Coordinación de Prevención y Atención a VIH e ITS', photo: '/images/equipo-ivan.jpg', focus: 'center 20%',
-    bio: 'Soy Licenciado en Sociología, líder del proyecto de "Ampliación de PrEP en Toluca" en cooperación con la Embajada de Francia en México; Gestión de consejería y tamizaje en VIH, Sífilis y VHC; Vinculación de casos a PrEP, PEP y TAR; Planificación de jornadas comunitarias en espacios públicos y espacios clave; Capacitaciones de bioética a personal de salud del estado de México; y colaboración con instituciones públicas de salud para fortalecer las actividades y servicios de atención.',
-  },
-  {
-    name: 'César M.G. (él)', role: 'Coordinación de Atención a la Salud Mental', photo: '/images/equipo-cesar.jpg', focus: 'center 15%',
-    bio: 'Soy Licenciado en Psicología y Maestro en Educación, actualmente estudia la Licenciatura en Educación Primaria en la ByBENMAC del estado de Zacatecas. Con amplia experiencia en docencia, orientación educativa y acompañamiento psicológico. Activista por los derechos humanos de la comunidad LGBTTTIQANB+, con enfoque en perspectiva de género, diversidad e inclusión.',
-  },
-  {
     name: 'Edson Morales (él)', role: 'Coordinación de Voluntariado, Servicio Social y Prácticas Profesionales', photo: '/images/equipo-edson.jpg', focus: 'center 20%',
     bio: 'Soy Psicólogo, especialista y maestrante en Género, Sociedad y Políticas Públicas (UAEMéx), con certificaciones en derechos humanos y atención a mujeres víctimas de violencia de género. Mi labor profesional se enfoca en el trabajo con juventudes LGBTTTIQANB+, sexualidad, masculinidades y prevención de violencia, con experiencia en intervención en crisis.',
   },
