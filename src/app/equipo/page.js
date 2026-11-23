@@ -13,6 +13,8 @@ const TEAM = [
     name: 'Dany Contreras Fuentes (ella/elle/él)', role: 'Coordinación de Calli', photo: '/images/equipo-dany-contreras.jpg', focus: 'center 25%',
     bio: 'Soy una persona No Binaria que estudió Administración en Negocios Internacionales y amplié mi formación a través de la licenciatura en Ciencias Políticas y Administración Pública. Me desempeño como auxiliar en programas de investigación académica. Cuento con nueve años de experiencia consolidada y labor social sobre los derechos LGBTTTIQANB+, además de brindar atención personal en el centro comunitario Calli.',
   },
+  { role: 'Coordinación de Prevención y Atención a VIH e ITS', vacant: true },
+  { role: 'Coordinación de Atención a la Salud Mental', vacant: true },
   {
     name: 'Edson Morales (él)', role: 'Coordinación de Voluntariado, Servicio Social y Prácticas Profesionales', photo: '/images/equipo-edson.jpg', focus: 'center 20%',
     bio: 'Soy Psicólogo, especialista y maestrante en Género, Sociedad y Políticas Públicas (UAEMéx), con certificaciones en derechos humanos y atención a mujeres víctimas de violencia de género. Mi labor profesional se enfoca en el trabajo con juventudes LGBTTTIQANB+, sexualidad, masculinidades y prevención de violencia, con experiencia en intervención en crisis.',
@@ -83,8 +85,8 @@ const TEAM = [
   },
 ]
 
-const FEATURED = TEAM.filter(member => member.bio || member.featured)
-const REST = TEAM.filter(member => !member.bio && !member.featured)
+const FEATURED = TEAM.filter(member => member.bio || member.featured || member.vacant)
+const REST = TEAM.filter(member => !member.bio && !member.featured && !member.vacant)
 
 export default function EquipoPage() {
   return (
@@ -92,11 +94,11 @@ export default function EquipoPage() {
       <div className="about-page">
         <h1 style={{ color: 'var(--color-accent)' }}>Conoce al equipo</h1>
 
-        {FEATURED.map(({ name, role, photo, focus, bio }, i) => {
+        {FEATURED.map(({ name, role, photo, focus, bio, vacant }, i) => {
           const isFirstVolunteer = role === 'Voluntariado' && (i === 0 || FEATURED[i - 1].role !== 'Voluntariado')
 
           return (
-          <div key={name}>
+          <div key={name || role}>
             {isFirstVolunteer && (
               <p style={{
                 fontSize: '2.25rem', fontWeight: 900, color: 'var(--color-accent)', textAlign: 'center',
@@ -108,40 +110,42 @@ export default function EquipoPage() {
             {role && role !== 'Voluntariado' && (
               <p style={{
                 fontSize: '1.3rem', fontWeight: 900, color: 'var(--color-accent)', textAlign: 'center',
-                maxWidth: 900, margin: '0 auto 1.25rem', textTransform: 'uppercase', letterSpacing: '0.06em',
+                maxWidth: 900, margin: vacant ? '0 auto 3rem' : '0 auto 1.25rem', textTransform: 'uppercase', letterSpacing: '0.06em',
               }}>
                 {role}
               </p>
             )}
-            <div
-              style={{
-                display: 'flex', flexWrap: 'wrap', gap: '2rem',
-                maxWidth: 900, margin: '0 auto 3rem', alignItems: 'flex-start',
-              }}
-            >
-            <div style={{ width: 220, flexShrink: 0, textAlign: 'center', marginLeft: 'auto', marginRight: bio ? 0 : 'auto' }}>
-              <img
-                src={photo}
-                alt={name}
+            {!vacant && (
+              <div
                 style={{
-                  width: 180, height: 180, borderRadius: '50%', objectFit: 'cover',
-                  objectPosition: focus || 'center',
-                  border: '1px solid var(--color-border)', marginBottom: '1rem',
-                  marginLeft: 'auto', marginRight: 'auto', display: 'block',
+                  display: 'flex', flexWrap: 'wrap', gap: '2rem',
+                  maxWidth: 900, margin: '0 auto 3rem', alignItems: 'flex-start',
                 }}
-              />
-              <p style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--color-text)', margin: 0 }}>{name}</p>
-            </div>
+              >
+              <div style={{ width: 220, flexShrink: 0, textAlign: 'center', marginLeft: 'auto', marginRight: bio ? 0 : 'auto' }}>
+                <img
+                  src={photo}
+                  alt={name}
+                  style={{
+                    width: 180, height: 180, borderRadius: '50%', objectFit: 'cover',
+                    objectPosition: focus || 'center',
+                    border: '1px solid var(--color-border)', marginBottom: '1rem',
+                    marginLeft: 'auto', marginRight: 'auto', display: 'block',
+                  }}
+                />
+                <p style={{ fontWeight: 700, fontSize: '1.1rem', color: 'var(--color-text)', margin: 0 }}>{name}</p>
+              </div>
 
-            {bio && (
-              <p style={{
-                flex: '1 1 320px', textAlign: 'justify', color: 'var(--color-text-muted)',
-                lineHeight: 1.75, marginTop: '0.5rem',
-              }}>
-                {bio}
-              </p>
+              {bio && (
+                <p style={{
+                  flex: '1 1 320px', textAlign: 'justify', color: 'var(--color-text-muted)',
+                  lineHeight: 1.75, marginTop: '0.5rem',
+                }}>
+                  {bio}
+                </p>
+              )}
+              </div>
             )}
-            </div>
           </div>
           )
         })}
